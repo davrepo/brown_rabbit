@@ -1,3 +1,8 @@
+.main-content.blur {
+    filter: blur(2px);
+}
+
+
 #carouselExampleCaptions {
     margin: auto;
   }
@@ -22,8 +27,6 @@
       max-width: 1200px;
     }
   }
-  
-  
 
 body {
     font-family: "Times New Roman", Times, serif;
@@ -253,18 +256,26 @@ text-align: left;
     align-items: center;
     justify-content: center;
     z-index: 1000;
+    overflow: hidden;
 }
 
 .popup-content {
     background-color: #fff;
-    border-radius: 10px;
     padding: 20px;
-    max-width: 400px;
+    width: 75%;
+    height: 75%;
     text-align: center;
     position: relative;
     overflow-y: auto;
-    max-height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
+.blur {
+    filter: blur(5px);
+}
+
   
   .popup-header {
     display: flex;
@@ -280,5 +291,73 @@ text-align: left;
     cursor: pointer;
   }
   
+  #sponsors {
+    text-align: center;
+}
+  
+.no-gap {
+    margin: 0;
+}
+
+.search-bar {
+    position: relative;
+  }
+  
+  #search-input {
+    width: 180px;
+  }
+  
+  #search-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 180px;
+    padding: .5rem 0;
+    margin: .125rem 0 0;
+    font-size: 1rem;
+    color: #fff;
+    text-align: left;
+    list-style: none;
+    background-color: #000;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: .25rem;
+  }
+
+  .search-bar .dropdown-menu {
+    width: 150%; /* Change width to 150% of the original */
+    right: 0; /* Align dropdown to the right of the search bar */
+    left: auto; /* Override left alignment */
+  }
+  
+  #search-dropdown.show {
+    display: block;
+  }
+  
+  .dropdown-content p {
+    margin: 0;
+    padding: 10px 20px;
+    color: white;
+  }
+
+  .dropdown-content h6 {
+    /* font-size: 14px; */
+    margin: 0;
+    padding: 10px 20px; /* top right bottom left */
+    color: white;
+}
+
+  
+.dropdown-content hr {
+    margin: 0;
+    padding: 10px 20px; /* top right bottom left */
+    border-top-color: gray;
+}
+
+
   
   

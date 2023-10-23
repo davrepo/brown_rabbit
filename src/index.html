@@ -10,6 +10,7 @@
 
 <body>
 
+<div class="main-content">
   <!-- Header -->
   <header class="bg-black" style="padding: 20px 0 150px 0;">
     <div class="container">
@@ -19,10 +20,25 @@
         </div>
         <div class="col-md-10">
           <div class="d-flex justify-content-end align-items-center">
+
+            <!-- search bar -->
             <div class="search-bar mr-3">
               <img src="assets/icons/search.svg" alt="Search">
-              <input type="text" placeholder="Search" class="form-control">
-            </div>
+              <input type="text" placeholder="Search" class="form-control" id="search-input">
+              <div class="dropdown-menu dropdown-menu-right" id="search-dropdown">
+                <div class="dropdown-content">
+                  <h6>Wonderful Copenhagen 2021</h6>
+                  <p>Section 1: Lorem ipsum dolor sit amet, consetetur sadipscing elitr...</p>
+                  <hr>
+                  <h6>Wonderful Copenhagen 2020</h6>
+                  <p>Section 2: Lorem ipsum dolor sit amet, consetetur sadipscing elitr...</p>
+                  <hr>
+                  <h6>Wonderful Copenhagen 2019</h6>
+                  <p>Section 3: Lorem ipsum dolor sit amet, consetetur sadipscing elitr...</p>
+                </div>
+              </div>
+            </div>            
+
             <div class="social-icons">
               <a href="#"><img src="assets/icons/linkedin-white.svg" alt="LinkedIn" class="social-icon"></a>
               <a href="#"><img src="assets/icons/twitter-white.svg" alt="Twitter" class="social-icon"></a>
@@ -201,10 +217,10 @@
 
     </div>
     <hr>
-    <h6 style="text-align: center;">World Barista Cup Sponsors</h6>
+    <h4 style="text-align: center;">World Barista Cup Sponsors</h4>
 
     <!-- Sponsor logos -->
-    <div class="container" id="sponsors"></div>
+    <div class="container" id="sponsors" style="text-align: center;"></div>
     
     <footer class="bg-black text-white pt-4 pb-4">
         <div class="container">
@@ -257,32 +273,31 @@
                 <div class="col-md-4 text-center">
                     <h6>Contact</h6>
                     <p>World Barista Cup</p>
-                    <p style="color:gray">Amagertorv 13</p>
-                    <p style="color:gray">1350 Copenhagen K</p>
-                    <p style="color:gray">+45 33 12 04 28</p>
-                    <p style="color:gray">CVR: 11329502</p>
-                    <p style="color:gray">Email: info@worldbaristacup.com</p>
+                    <p class="no-gap" style="color: gray;">Amagertorv 13</p>
+<p class="no-gap" style="color: gray;">1350 Copenhagen K</p>
+<p class="no-gap" style="color: gray;">+45 33 12 04 28</p>
+<p class="no-gap" style="color: gray;">CVR: 11329502</p>
+<p class="no-gap" style="color: gray;">Email: info@worldbaristacup.com</p>
+
 
                 </div>
             </div>
         </div>
     </footer>
+</div>
+</div>
+
 
     <div class="popup-container" id="popup-container">
         <div class="popup-content" id="popup-content"></div>
     </div>
-    
 
   </div>
-
-
 
 <!-- Scripts -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <script src="js/scripts.js"></script>
-
-
 
 </html>

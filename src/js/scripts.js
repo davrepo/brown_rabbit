@@ -2,11 +2,11 @@ const sponsorsContainer = document.getElementById('sponsors');
 
 function createSponsorRow(start, end) {
     const row = document.createElement('div');
-    row.className = 'row';
+    row.className = 'row justify-content-center';  // Updated class
 
     for (let i = start; i <= end; i++) {
         const col = document.createElement('div');
-        col.className = 'col-1';
+        col.className = 'col';  // Updated class
 
         const img = document.createElement('img');
         img.src = `assets/images/sponsors/sponsor-${i}.png`;
@@ -19,6 +19,7 @@ function createSponsorRow(start, end) {
 
     return row;
 }
+
 
 sponsorsContainer.appendChild(createSponsorRow(1, 10));
 sponsorsContainer.appendChild(createSponsorRow(11, 20));
@@ -39,8 +40,9 @@ for (let i = 0; i < 9; i++) {
 
 // readMore button functionality
 const readMoreButtons = document.querySelectorAll('.read-more-btn');
-    const popupContainer = document.getElementById('popup-container');
-    const popupContent = document.getElementById('popup-content');
+const popupContainer = document.getElementById('popup-container');
+const popupContent = document.getElementById('popup-content');
+const mainContent = document.querySelector('.main-content');
 
 readMoreButtons.forEach(button => {
     button.addEventListener('click', function() {
@@ -49,6 +51,7 @@ readMoreButtons.forEach(button => {
             .then(data => {
                 popupContent.innerHTML = data;
                 popupContainer.style.display = 'flex';
+                mainContent.classList.add('blur');
             })
             .catch(error => console.log(error));
     });
@@ -56,4 +59,16 @@ readMoreButtons.forEach(button => {
 
 popupContainer.addEventListener('click', function() {
     popupContainer.style.display = 'none';
+    mainContent.classList.remove('blur');
 });
+
+document.getElementById('search-input').addEventListener('focus', function() {
+    document.getElementById('search-dropdown').classList.add('show');
+  });
+  
+  document.getElementById('search-input').addEventListener('blur', function() {
+    setTimeout(function() {
+      document.getElementById('search-dropdown').classList.remove('show');
+    }, 200);
+  });
+  
