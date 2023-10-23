@@ -1,20 +1,369 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Brown rabbit test</title>
-        <link rel="stylesheet" href="css/main.css" type="text/css" >
-    </head>
-    <body>
-        <div class="wrapper">
-            <img src="assets/twentyfour-logo.svg" alt="Twentyfour!"/>
-            <h1 id="headline">
-                THE BROWN
-            </h1>
-            <a target="_blank" href="../readme.md">Project description</a>
-            <span> · </span>
-            <a target="_blank" href="https://xd.adobe.com/view/e3a1c6ff-52f7-41ed-9e70-bad4e6e9b930-b6f2/grid"> See design</a>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brown Rabbit</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="bg-black" style="padding: 20px 0 150px 0;">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-2">
+          <img src="assets/logo-white.png" alt="Logo" class="img-fluid logo">
         </div>
-        <script src="js/scripts.js" type="text/javascript"></script>
-    </body>
+        <div class="col-md-10">
+          <div class="d-flex justify-content-end align-items-center">
+            <div class="search-bar mr-3">
+              <img src="assets/icons/search.svg" alt="Search">
+              <input type="text" placeholder="Search" class="form-control">
+            </div>
+            <div class="social-icons">
+              <a href="#"><img src="assets/icons/linkedin-white.svg" alt="LinkedIn" class="social-icon"></a>
+              <a href="#"><img src="assets/icons/twitter-white.svg" alt="Twitter" class="social-icon"></a>
+              <a href="#"><img src="assets/icons/instagram-white.svg" alt="Instagram" class="social-icon"></a>
+              <a href="#"><img src="assets/icons/facebook-white.svg" alt="Facebook" class="social-icon"></a>
+            </div>
+          </div>
+          <div class="mt-3">
+            <nav class="navbar navbar-expand-md navbar-dark bg-black p-0">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">About us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Events</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Nordic roaster</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Results</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Links</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Contacts</a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Slider -->
+  <div id="carouselExampleCaptions" class="carousel slide carousel-custom" data-ride="carousel" data-interval="false" style="margin-top: -100px;">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="assets\coffee\coffee-brain-caffeine-neuroscincces.webp" class="d-block w-100" alt="Slide 1">
+        <div class="carousel-caption d-none d-md-block">
+            <div class="description-box">
+                <p>"This is a great introduction do the coffee <br>
+                    industry's best beans on the planet"</p>
+            </div>
+        </div>        
+      </div>
+      <div class="carousel-item">
+        <img src="assets\coffee\fresh-coffee-steams-wooden-table-close-up-generative-ai_188544-8923.avif" class="d-block w-100" alt="Slide 2">
+        <div class="carousel-caption d-none d-md-block">
+            <div class="description-box">
+                <p>"Coffee in code out, this is the way of eternal life <br>
+                    and empowerment of the soul"</p>
+            </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="assets\coffee\Latte_and_dark_coffee.jpg" class="d-block w-100" alt="Slide 3">
+        <div class="carousel-caption d-none d-md-block">
+            <div class="description-box">
+                <p>"To create an environment in which knowledge <br>
+                    about coffee and its sphere can be obtained"</p>
+            </div>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+
+    <!-- Custom next and previous arrows -->
+    <div class="custom-controls">
+        <img src="assets\icons\arrow-left.svg" alt="Left" data-target="#carouselExampleCaptions" data-slide="prev">
+        <img src="assets\icons\arrow-right.svg" alt="Right" data-target="#carouselExampleCaptions" data-slide="next">
+    </div>
+</div>
+
+<!-- Mini blogs and Contact Information -->
+<div class="container mt-4">
+    <div class="row">
+      <div class="col-md-9">
+        <!-- Mini Blogs -->
+        <div class="mini-blog popup-trigger" onclick="openPopup()">
+          <img src="assets/images/posts/Post thumbnail-1.png" alt="Blog 1" class="blog-image">
+          <div>
+            <h4>Wonderful Copenhagen 2021</h4>
+            <p class="published-date">Published 12/07/2021</p>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy 
+                eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam 
+                voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd 
+                gubergren, no sea takimata sanctus est ...</p>
+            <a href="#" class="read-more-btn">Read more</a>
+          </div>
+        </div>
+  
+        <div class="mini-blog popup-trigger" onclick="openPopup()">
+          <img src="assets/images/posts/Post thumbnail-2.png" alt="Blog 2" class="blog-image">
+          <div>
+            <h4>The most expensive coffee on the market</h4>
+            <p class="published-date">Published 12/07/2021</p>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy 
+                eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam 
+                voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd 
+                gubergren, no sea takimata sanctus est ...</p>
+            <a href="#" class="read-more-btn">Read more</a>
+          </div>
+        </div>
+  
+        <div class="mini-blog popup-trigger" onclick="openPopup()">
+          <img src="assets/images/posts/Post thumbnail-3.png" alt="Blog 3" class="blog-image">
+          <div>
+            <h4>10 type of coffee beans you need to know</h4>
+            <p class="published-date">Published 12/07/2021</p>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy 
+                eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam 
+                voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd 
+                gubergren, no sea takimata sanctus est ...</p>
+            <a href="#" class="read-more-btn">Read more</a>
+          </div>
+        </div>
+  
+        <div class="mini-blog popup-trigger" onclick="openPopup()">
+          <img src="assets/images/posts/Post thumbnail-4.png" alt="Blog 4" class="blog-image">
+          <div>
+            <h4>Challenge your barista skills to the max</h4>
+            <p class="published-date">Published 12/07/2021</p>
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy 
+                eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam 
+                voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd 
+                gubergren, no sea takimata sanctus est ...</p>
+            <a href="#" class="read-more-btn">Read more</a>
+          </div>
+        </div>
+        <hr>
+        <!-- Previous, Center, Next -->
+        <div class="pagination">
+            <a href="#" class="read-more-btn">Previous</a>
+            <p>Page 1 of 3</p>
+            <a href="#" class="read-more-btn">Next</a>
+        </div>
+
+      </div>
+      <div class="col-md-3">
+        <!-- Contact Information -->
+        <div class="contact-info">
+          <h5>WBC Shop</h5>
+          <p>Your shopping cart is empty</p>
+          <a href="#" class="read-more-btn">Visit the shop</a>
+          <hr>
+          <h5>Next event</h5>
+          <h6>World Barista Cup 2021</h6>
+          <p>Copenhagen, Denmark</p>
+          <p>Dates: 25th - 27th August 2011</p>
+          <p>Theme: SENSORY</p>
+          <a href="#" class="read-more-btn">Sign up now</a>
+          <hr>
+          <h5>Scoreboard</h5>
+          <h6>List of winners from last year</h> 
+          <p>2021 - ?</p>
+          <p>2020 - Denmark</p>
+          <p>2021 - Sweden</p>
+          <p>2021 - Turkey</p>
+        </div>
+      </div>
+
+    </div>
+    <hr>
+    <h6 style="text-align: center;">World Barista Cup Sponsors</h6>
+
+    <!-- Sponsor logos -->
+    <div class="container" id="sponsors"></div>
+    
+    <footer class="bg-black text-white pt-4 pb-4">
+        <div class="container">
+            <!-- Header Section -->
+            <div class="row mb-4 align-items-center">
+                <!-- Logo -->
+                <div class="col-md-6">
+                    <img src="assets/logo-white.png" alt="Logo" class="img-fluid">
+                </div>
+                
+                <!-- Social Media Icons -->
+                <div class="col-md-6 text-right">
+                    <a href="#"><img src="assets/icons/linkedin-white.svg" alt="Facebook" class="social-icon"></a>
+                    <a href="#"><img src="assets/icons/twitter-white.svg" alt="Twitter" class="social-icon"></a>
+                    <a href="#"><img src="assets/icons/instagram-white.svg" alt="Instagram" class="social-icon"></a>
+                    <a href="#"><img src="assets/icons/facebook-white.svg" alt="LinkedIn" class="social-icon"></a>
+                </div>
+            </div>
+
+            <hr class="footer-separator">
+            
+            
+            <!-- Bottom Section -->
+            <div class="row">
+                <!-- First Column -->
+                <div class="col-md-4 text-center">
+                    <h6>About World Barista Cup</h6>
+                    <p style="color:gray">The version within The World Barista Cup</p>
+                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est ...</p>
+                </div>
+                
+                <!-- Second Column -->
+                <div class="col-md-4 text-center">
+                    <h6>Instagram feed</h6>
+                    
+                    <div class="row" id="instagram-feed">
+                        <div class="instagram-row">
+                            <!-- Images for row 1 will be added here by the JavaScript script -->
+                        </div>
+                        <div class="instagram-row">
+                            <!-- Images for row 2 will be added here by the JavaScript script -->
+                        </div>
+                        <div class="instagram-row">
+                            <!-- Images for row 3 will be added here by the JavaScript script -->
+                        </div>
+                    </div>                    
+                </div>
+                
+                <!-- Third Column -->
+                <div class="col-md-4 text-center">
+                    <h6>Contact</h6>
+                    <p>World Barista Cup</p>
+                    <p style="color:gray">Amagertorv 13</p>
+                    <p style="color:gray">1350 Copenhagen K</p>
+                    <p style="color:gray">+45 33 12 04 28</p>
+                    <p style="color:gray">CVR: 11329502</p>
+                    <p style="color:gray">Email: info@worldbaristacup.com</p>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+  </div>
+
+  <div id="popup-container" class="popup-container">
+    <div class="popup-content">
+      <div class="popup-header">
+        <button class="close-btn" onclick="closePopup()">X</button>
+      </div>
+      <!-- Add your popup content here -->
+      <div class="popup-body">
+        <h1>Popup Content</h1>
+        <p>This is the content of the popup. This is the content of the popup. This is the content of the popup. This is the content of the popup. This is the content of the popup. This is the content of the popup. This is the content of the popup.</p>
+      </div>
+    </div>
+  </div>
+  
+
+
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+
+<script>
+    const sponsorsContainer = document.getElementById('sponsors');
+
+    function createSponsorRow(start, end) {
+        const row = document.createElement('div');
+        row.className = 'row';
+
+        for (let i = start; i <= end; i++) {
+            const col = document.createElement('div');
+            col.className = 'col-1';
+
+            const img = document.createElement('img');
+            img.src = `assets/images/sponsors/sponsor-${i}.png`;
+            img.alt = `Sponsor ${i}`;
+            img.className = 'img-fluid';
+
+            col.appendChild(img);
+            row.appendChild(col);
+        }
+
+        return row;
+    }
+
+    sponsorsContainer.appendChild(createSponsorRow(1, 10));
+    sponsorsContainer.appendChild(createSponsorRow(11, 20));
+</script>
+
+<script>
+    // JavaScript to create the 3x3 grid of images
+    const instagramFeed = document.getElementById('instagram-feed');
+    const rows = instagramFeed.getElementsByClassName('instagram-row');
+
+    for (let i = 0; i < 9; i++) {
+        const img = document.createElement('img');
+        img.src = `assets/images/instagram-feed/instagram-image-${i + 1}.png`;
+        img.alt = `Instagram Image ${i + 1}`;
+        img.className = 'img-fluid';
+
+        const rowIndex = Math.floor(i / 3);
+        rows[rowIndex].appendChild(img);
+    }
+</script>
+
+<script>
+    const popupTriggers = document.querySelectorAll('.popup-trigger');
+  
+    popupTriggers.forEach(trigger => {
+      trigger.addEventListener('click', openPopup);
+    });
+  
+    function openPopup() {
+      const popupContainer = document.getElementById('popup-container');
+      const indexContent = document.body;
+  
+      popupContainer.style.display = 'flex';
+      indexContent.classList.add('blur');
+  
+      document.body.style.overflow = 'hidden';
+    }
+  
+    function closePopup() {
+      const popupContainer = document.getElementById('popup-container');
+      const indexContent = document.body;
+  
+      popupContainer.style.display = 'none';
+      indexContent.classList.remove('blur');
+  
+      document.body.style.overflow = '';
+    }
+  </script>
+  
+
 </html>

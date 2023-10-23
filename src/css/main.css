@@ -1,18 +1,283 @@
+#carouselExampleCaptions {
+    margin: auto;
+  }
+  
+  /* Mobile */
+  @media (max-width: 575.98px) { 
+    #carouselExampleCaptions {
+      max-width: 375px;
+    }
+  }
+  
+  /* Tablet */
+  @media (min-width: 576px) and (max-width: 991.98px) { 
+    #carouselExampleCaptions {
+      max-width: 768px;
+    }
+  }
+  
+  /* Desktop */
+  @media (min-width: 992px) {
+    #carouselExampleCaptions {
+      max-width: 1200px;
+    }
+  }
+  
+  
+
 body {
-    height: 100vh;
+    font-family: "Times New Roman", Times, serif;
+  }
+  
+h3 {
+font-size: 30px;
+}
+
+h6 {
+text-align: left;
+}
+    
+
+p {
+font-size: 14px;
+text-align: left;
+}
+
+.black-border {
+    border: 1px solid black;
+    height: 300px; /* Adjust as needed */
     display: flex;
-    background: linear-gradient(180deg, #f7214f 0, #c00d34 100%);
-    color: white;
-    text-align: center;
     align-items: center;
     justify-content: center;
 }
-.wrapper{
-    text-align: center;
+
+.carousel-inner {
+    height: auto; /* Set the height as per your requirement */
+    overflow: visible; /* This will allow content outside of the carousel to be visible */
 }
 
-a{
-    color: white;
-    margin-top: 15px;
-    display: inline-block;
+.carousel-item {
+    height: 300px; /* Set the desired fixed height */
 }
+
+.custom-controls {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin-top: 10px; /* Add margin to separate arrows from the slide */
+    margin-right: 50px;
+}
+
+.custom-controls img {
+    width: 15px; /* Adjust the width as per your requirement */
+    height: auto;
+    cursor: pointer;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    display: none;
+}
+  
+.custom-controls button {
+    margin-left: 5px;
+} 
+  
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-custom .carousel-inner .carousel-item img {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: -60px;
+    left: 0;
+    padding-left: 75px;
+    width: 70%;
+    z-index: 1; /* This will make sure the text is above the carousel */
+}
+
+.description-box {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    margin: 0;
+}
+
+.carousel-caption p {
+    text-align: left;
+    margin: 0;
+    opacity: 0;
+    animation: fadeIn 2s forwards; /* This will make the text fade in */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.bg-black {
+    background-color: #000000;
+}
+
+.logo {
+    width: 300%;
+    max-width: 250px; /* Adjust as needed */
+}
+
+.search-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid grey;
+}
+
+.search-bar input {
+    padding-left: 10px;
+    background-color: black;
+    border: none;
+    color: white;
+    outline: none;
+    border-radius: 0; /* This prevents the box effect */
+    box-shadow: none; /* This prevents any shadow */
+}
+
+.search-bar input:focus {
+    background-color: black; /* This prevents white background on click */
+}
+
+.search-bar img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.social-icons img {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+}
+
+.navbar-nav {
+    justify-content: flex-end;
+}
+
+.mini-blog {
+    display: flex;
+    margin-top: 20px; /* Adjusted from 40px */
+    margin-left: 20px; /* Adjusted from 40px */
+    margin-bottom: 10px; /* Adjusted from 20px */
+}
+  
+.mini-blog img {
+    width: 35%;
+    height: 150px; /* Specify height */
+    object-fit: contain;
+}
+  
+.mini-blog div {
+    width: 50%;
+    padding-left: 20px;
+}
+  
+.read-more-btn {
+    padding: 8px 16px;
+    font-size: 80%;
+    border: 1px solid black;
+    color: black;
+    background-color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+  
+.read-more-btn:hover {
+    color: white;
+    background-color: black;
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-info {
+    margin-top: 40px;
+}
+
+.published-date {
+    color: grey;
+}
+
+.social-icon {
+    width: 15px;
+    height: 15px;
+    margin-right: 8px;
+}
+
+.footer-separator {
+    border-color: grey;
+}
+
+#instagram-feed .instagram-row {
+    clear: both;
+}
+
+#instagram-feed img {
+    width: 25%;
+    height: auto;
+    margin: 4px;
+    float: left;
+    display: block;
+}
+
+.popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .popup-content {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    overflow-y: auto;
+    max-height: 80%;
+  }
+  
+  .popup-header {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .close-btn {
+    background-color: #ff0000;
+    border: none;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  
