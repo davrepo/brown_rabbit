@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -117,7 +116,7 @@
     <div class="row">
       <div class="col-md-9">
         <!-- Mini Blogs -->
-        <div class="mini-blog popup-trigger" onclick="openPopup()">
+        <div class="mini-blog">
           <img src="assets/images/posts/Post thumbnail-1.png" alt="Blog 1" class="blog-image">
           <div>
             <h4>Wonderful Copenhagen 2021</h4>
@@ -130,7 +129,7 @@
           </div>
         </div>
   
-        <div class="mini-blog popup-trigger" onclick="openPopup()">
+        <div class="mini-blog">
           <img src="assets/images/posts/Post thumbnail-2.png" alt="Blog 2" class="blog-image">
           <div>
             <h4>The most expensive coffee on the market</h4>
@@ -143,7 +142,7 @@
           </div>
         </div>
   
-        <div class="mini-blog popup-trigger" onclick="openPopup()">
+        <div class="mini-blog">
           <img src="assets/images/posts/Post thumbnail-3.png" alt="Blog 3" class="blog-image">
           <div>
             <h4>10 type of coffee beans you need to know</h4>
@@ -156,7 +155,7 @@
           </div>
         </div>
   
-        <div class="mini-blog popup-trigger" onclick="openPopup()">
+        <div class="mini-blog">
           <img src="assets/images/posts/Post thumbnail-4.png" alt="Blog 4" class="blog-image">
           <div>
             <h4>Challenge your barista skills to the max</h4>
@@ -269,21 +268,12 @@
         </div>
     </footer>
 
-  </div>
-
-  <div id="popup-container" class="popup-container">
-    <div class="popup-content">
-      <div class="popup-header">
-        <button class="close-btn" onclick="closePopup()">X</button>
-      </div>
-      <!-- Add your popup content here -->
-      <div class="popup-body">
-        <h1>Popup Content</h1>
-        <p>This is the content of the popup. This is the content of the popup. This is the content of the popup. This is the content of the popup. This is the content of the popup. This is the content of the popup. This is the content of the popup.</p>
-      </div>
+    <div class="popup-container" id="popup-container">
+        <div class="popup-content" id="popup-content"></div>
     </div>
+    
+
   </div>
-  
 
 
 
@@ -291,79 +281,8 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="js/scripts.js"></script>
 
-</body>
 
-<script>
-    const sponsorsContainer = document.getElementById('sponsors');
-
-    function createSponsorRow(start, end) {
-        const row = document.createElement('div');
-        row.className = 'row';
-
-        for (let i = start; i <= end; i++) {
-            const col = document.createElement('div');
-            col.className = 'col-1';
-
-            const img = document.createElement('img');
-            img.src = `assets/images/sponsors/sponsor-${i}.png`;
-            img.alt = `Sponsor ${i}`;
-            img.className = 'img-fluid';
-
-            col.appendChild(img);
-            row.appendChild(col);
-        }
-
-        return row;
-    }
-
-    sponsorsContainer.appendChild(createSponsorRow(1, 10));
-    sponsorsContainer.appendChild(createSponsorRow(11, 20));
-</script>
-
-<script>
-    // JavaScript to create the 3x3 grid of images
-    const instagramFeed = document.getElementById('instagram-feed');
-    const rows = instagramFeed.getElementsByClassName('instagram-row');
-
-    for (let i = 0; i < 9; i++) {
-        const img = document.createElement('img');
-        img.src = `assets/images/instagram-feed/instagram-image-${i + 1}.png`;
-        img.alt = `Instagram Image ${i + 1}`;
-        img.className = 'img-fluid';
-
-        const rowIndex = Math.floor(i / 3);
-        rows[rowIndex].appendChild(img);
-    }
-</script>
-
-<script>
-    const popupTriggers = document.querySelectorAll('.popup-trigger');
-  
-    popupTriggers.forEach(trigger => {
-      trigger.addEventListener('click', openPopup);
-    });
-  
-    function openPopup() {
-      const popupContainer = document.getElementById('popup-container');
-      const indexContent = document.body;
-  
-      popupContainer.style.display = 'flex';
-      indexContent.classList.add('blur');
-  
-      document.body.style.overflow = 'hidden';
-    }
-  
-    function closePopup() {
-      const popupContainer = document.getElementById('popup-container');
-      const indexContent = document.body;
-  
-      popupContainer.style.display = 'none';
-      indexContent.classList.remove('blur');
-  
-      document.body.style.overflow = '';
-    }
-  </script>
-  
 
 </html>
